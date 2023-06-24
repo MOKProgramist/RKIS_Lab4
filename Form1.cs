@@ -61,7 +61,7 @@ namespace RKIS_Lab4
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            PavilionsChange = pavilions.Where(x => x.Status.Contains(textBox1.Text)).ToList();
+            PavilionsChange = pavilions.Where(x => x.Status.ToLower().Contains(textBox1.Text.ToLower())).ToList();
 
             LoadOrder();
         }
